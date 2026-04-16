@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemati - Privacy Policy | سينمائي - سياسة الخصوصية</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg-primary: #0A0A12;
+            --bg-secondary: #12121E;
+            --bg-card: #1A1A2E;
+            --gold: #F5C518;
+            --gold-dim: #C49E10;
+            --text-primary: #E8E8F0;
+            --text-secondary: #A0A0B8;
+            --border: #2A2A40;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            z-index: 100;
+            display: flex;
+            gap: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--gold-dim);
+        }
+
+        .lang-btn {
+            padding: 8px 18px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+        }
+
+        .lang-btn.active {
+            background: var(--gold);
+            color: var(--bg-primary);
+        }
+
+        .lang-btn:hover:not(.active) {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 24px 40px;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, #12121E 0%, var(--bg-primary) 100%);
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .logo-ar {
+            font-size: 32px;
+            color: var(--gold-dim);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        header h1 {
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .effective-date {
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 28px 32px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        section h2 {
+            font-size: 20px;
+            color: var(--gold);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--bg-primary);
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: var(--gold-dim);
+            margin: 18px 0 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin: 8px 0 16px 20px;
+            color: var(--text-secondary);
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            padding-left: 4px;
+        }
+
+        ul li::marker {
+            color: var(--gold);
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(245, 197, 24, 0.06);
+            border-left: 3px solid var(--gold);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 16px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        th {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* RTL support for Arabic */
+        [dir="rtl"] section {
+            direction: rtl;
+            text-align: right;
+        }
+
+        [dir="rtl"] ul {
+            margin: 8px 20px 16px 0;
+        }
+
+        [dir="rtl"] .highlight-box {
+            border-left: none;
+            border-right: 3px solid var(--gold);
+            border-radius: 8px 0 0 8px;
+        }
+
+        [dir="rtl"] th, [dir="rtl"] td {
+            text-align: right;
+        }
+
+        [dir="rtl"] section h2 {
+            flex-direction: row-reverse;
+        }
+
+        .content-en, .content-ar { display: none; }
+        .content-en.visible, .content-ar.visible { display: block; }
+
+        @media (max-width: 600px) {
+            header { padding: 70px 16px 30px; }
+            .logo { font-size: 32px; }
+            .logo-ar { font-size: 24px; }
+            section { padding: 20px 18px; }
+            .container { padding: 24px 12px 60px; }
+            th, td { padding: 8px 10px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" id="btn-ar" onclick="switchLang('ar')">العربية</button>
+    </div>
+
+    <header>
+        <div class="logo">CINEMATI</div>
+        <div class="logo-ar">سينمائي</div>
+        <div class="content-en visible">
+            <h1>Privacy Policy</h1>
+            <p class="effective-date">Effective Date: April 16, 2026 &middot; Last Updated: April 16, 2026</p>
+        </div>
+        <div class="content-ar" dir="rtl">
+            <h1>سياسة الخصوصية</h1>
+            <p class="effective-date">تاريخ السريان: 16 أبريل 2026 &middot; آخر تحديث: 16 أبريل 2026</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- ============================================================ -->
+        <!-- ENGLISH CONTENT -->
+        <!-- ============================================================ -->
+        <div class="content-en visible">
+
+            <section>
+                <h2><span class="section-num">1</span> Introduction</h2>
+                <p>Welcome to <strong>Cinemati</strong> ("we", "our", or "us"). Cinemati is a movie trailer discovery application designed for Arabic-speaking audiences. We are committed to protecting your privacy and being transparent about the data we collect and how we use it.</p>
+                <p>This Privacy Policy explains our practices regarding the collection, use, and disclosure of information when you use the Cinemati mobile application (the "App"). By using the App, you agree to the practices described in this policy.</p>
+                <div class="highlight-box">
+                    <p><strong>No account required.</strong> Cinemati does not require you to create an account or sign in. We do not collect your name, email address, phone number, or any other personally identifiable information.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="section-num">2</span> Information We Collect</h2>
+
+                <h3>2.1 Device Identifier</h3>
+                <p>We collect your device's advertising identifier (such as Google Advertising ID or Apple IDFA) to serve personalized advertisements through Google AdMob. This identifier can be reset or disabled in your device settings.</p>
+
+                <h3>2.2 Product Interaction Data</h3>
+                <p>We collect data about how you interact with the App, including:</p>
+                <ul>
+                    <li>Movies and trailers you view or search for</li>
+                    <li>Genres and categories you browse</li>
+                    <li>Time spent watching trailers</li>
+                    <li>Watchlist and favorites selections</li>
+                </ul>
+
+                <h3>2.3 Advertising Data</h3>
+                <p>Through our advertising partner Google AdMob, limited data may be collected for the purpose of serving relevant advertisements, including:</p>
+                <ul>
+                    <li>Device advertising identifier</li>
+                    <li>General location (country/region level, not precise)</li>
+                    <li>Ad interaction data (impressions, clicks)</li>
+                </ul>
+
+                <h3>2.4 AI Recommendation Data</h3>
+                <p>When you choose to use our AI-powered movie recommendations feature, your viewing history and preferences may be shared with Anthropic's Claude API to generate personalized suggestions. This feature requires your explicit consent before activation.</p>
+
+                <h3>2.5 Summary of Data Collection</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Device Advertising ID</td>
+                            <td>Personalized advertising</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Viewing history</td>
+                            <td>App personalization</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Ad interaction data</td>
+                            <td>Ad delivery and analytics</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Preferences for AI</td>
+                            <td>AI movie recommendations</td>
+                            <td>Opt-in only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2><span class="section-num">3</span> How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul>
+                    <li><strong>Personalization:</strong> To tailor the movie and trailer recommendations shown to you based on your viewing history and preferences.</li>
+                    <li><strong>Advertising:</strong> To display relevant advertisements through Google AdMob, which helps keep the App free to use.</li>
+                    <li><strong>AI Recommendations:</strong> To provide intelligent, AI-powered movie suggestions through the Anthropic Claude API when you opt in to this feature.</li>
+                    <li><strong>App Improvement:</strong> To analyze usage patterns and improve the App's features, content, and user experience.</li>
+                    <li><strong>Content Delivery:</strong> To fetch movie data and metadata from TMDB and stream trailers via YouTube.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="section-num">4</span> Third-Party Services</h2>
+                <p>Cinemati integrates with the following third-party services. Each service has its own privacy policy governing how it handles data:</p>
+
+                <h3>4.1 Google AdMob</h3>
+                <p>We use Google AdMob to display advertisements. AdMob may collect device identifiers and ad interaction data to serve personalized or non-personalized ads.</p>
+                <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+                <h3>4.2 The Movie Database (TMDB)</h3>
+                <p>We use the TMDB API to retrieve movie information, posters, ratings, and other metadata. TMDB does not receive any of your personal data from us.</p>
+                <p><a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noopener">TMDB Privacy Policy</a></p>
+
+                <h3>4.3 YouTube</h3>
+                <p>Movie trailers are streamed via YouTube's embedded player. YouTube may collect data in accordance with Google's privacy policy when you watch trailers.</p>
+                <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">YouTube / Google Privacy Policy</a></p>
+
+                <h3>4.4 Anthropic (Claude API)</h3>
+                <p>When you opt in to AI-powered recommendations, your viewing preferences are sent to Anthropic's Claude API. Anthropic processes this data to generate movie suggestions and does not use it to train models.</p>
+                <p><a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">5</span> Data Retention &amp; Security</h2>
+                <h3>5.1 Data Retention</h3>
+                <p>Your interaction data is stored locally on your device and is retained for as long as the App is installed. If you uninstall the App, all locally stored data is deleted.</p>
+                <p>Data processed by third-party services (Google AdMob, Anthropic) is retained in accordance with their respective privacy policies and retention schedules.</p>
+
+                <h3>5.2 Data Security</h3>
+                <p>We implement industry-standard security measures to protect data during transmission and storage, including:</p>
+                <ul>
+                    <li>Encrypted communications (HTTPS/TLS) for all API calls</li>
+                    <li>Minimal data collection -- we only collect what is necessary</li>
+                    <li>No server-side storage of personal data by Cinemati</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>While we strive to use commercially acceptable means of protecting your data, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="section-num">6</span> Your Rights &amp; Choices</h2>
+                <p>You have the following rights and options regarding your data:</p>
+
+                <h3>6.1 Opt Out of Personalized Ads</h3>
+                <p>You can opt out of personalized advertising by adjusting your device settings:</p>
+                <ul>
+                    <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; "Delete advertising ID"</li>
+                    <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Tracking &gt; disable "Allow Apps to Request to Track"</li>
+                </ul>
+
+                <h3>6.2 Opt Out of AI Recommendations</h3>
+                <p>The AI-powered recommendation feature requires your explicit consent. You can disable it at any time within the App's settings. When disabled, no data is sent to Anthropic.</p>
+
+                <h3>6.3 Clear Local Data</h3>
+                <p>You can clear all locally stored data by clearing the App's cache and data in your device settings, or by uninstalling the App.</p>
+
+                <h3>6.4 Data Deletion Requests</h3>
+                <p>Since we do not maintain user accounts or store personal data on our servers, most data is already under your control. For any data deletion requests related to third-party services, please contact us at <a href="mailto:maytham.altaan@icloud.com">maytham.altaan@icloud.com</a>.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">7</span> Children's Privacy</h2>
+                <p>Cinemati is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child under 13 has provided data through the App, please contact us at <a href="mailto:maytham.altaan@icloud.com">maytham.altaan@icloud.com</a> and we will take steps to remove such information.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">8</span> Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically for any changes. Continued use of the App after changes are posted constitutes your acceptance of the revised policy.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">9</span> Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:maytham.altaan@icloud.com">maytham.altaan@icloud.com</a></li>
+                    <li><strong>App:</strong> Cinemati (سينمائي)</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ARABIC CONTENT -->
+        <!-- ============================================================ -->
+        <div class="content-ar" dir="rtl">
+
+            <section>
+                <h2><span class="section-num">1</span> المقدمة</h2>
+                <p>مرحبًا بكم في <strong>سينمائي</strong> ("نحن" أو "لنا"). سينمائي هو تطبيق لاكتشاف إعلانات الأفلام مُصمَّم للجمهور الناطق بالعربية. نحن ملتزمون بحماية خصوصيتكم والشفافية حول البيانات التي نجمعها وكيفية استخدامها.</p>
+                <p>توضّح سياسة الخصوصية هذه ممارساتنا المتعلقة بجمع المعلومات واستخدامها والإفصاح عنها عند استخدامكم لتطبيق سينمائي ("التطبيق"). باستخدامكم للتطبيق، فإنكم توافقون على الممارسات الموضّحة في هذه السياسة.</p>
+                <div class="highlight-box">
+                    <p><strong>لا يتطلب إنشاء حساب.</strong> لا يتطلب تطبيق سينمائي إنشاء حساب أو تسجيل دخول. نحن لا نجمع اسمكم أو بريدكم الإلكتروني أو رقم هاتفكم أو أي معلومات تعريف شخصية أخرى.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="section-num">2</span> المعلومات التي نجمعها</h2>
+
+                <h3>2.1 معرّف الجهاز</h3>
+                <p>نجمع معرّف الإعلانات الخاص بجهازكم (مثل معرّف إعلانات Google أو Apple IDFA) لعرض إعلانات مخصصة عبر Google AdMob. يمكنكم إعادة تعيين هذا المعرّف أو تعطيله من إعدادات جهازكم.</p>
+
+                <h3>2.2 بيانات التفاعل مع المنتج</h3>
+                <p>نجمع بيانات حول كيفية تفاعلكم مع التطبيق، بما في ذلك:</p>
+                <ul>
+                    <li>الأفلام والإعلانات التي تشاهدونها أو تبحثون عنها</li>
+                    <li>الأنواع والفئات التي تتصفحونها</li>
+                    <li>الوقت المستغرق في مشاهدة الإعلانات</li>
+                    <li>اختياراتكم في قائمة المشاهدة والمفضلة</li>
+                </ul>
+
+                <h3>2.3 بيانات الإعلانات</h3>
+                <p>من خلال شريكنا الإعلاني Google AdMob، قد يتم جمع بيانات محدودة لغرض عرض إعلانات ملائمة، بما في ذلك:</p>
+                <ul>
+                    <li>معرّف الإعلانات الخاص بالجهاز</li>
+                    <li>الموقع العام (على مستوى الدولة/المنطقة، وليس الدقيق)</li>
+                    <li>بيانات التفاعل مع الإعلانات (مرات الظهور، النقرات)</li>
+                </ul>
+
+                <h3>2.4 بيانات التوصيات بالذكاء الاصطناعي</h3>
+                <p>عند اختياركم استخدام ميزة التوصيات المدعومة بالذكاء الاصطناعي، قد تتم مشاركة سجل مشاهداتكم وتفضيلاتكم مع واجهة Anthropic Claude API لتوليد اقتراحات مخصصة. تتطلب هذه الميزة موافقتكم الصريحة قبل التفعيل.</p>
+
+                <h3>2.5 ملخص جمع البيانات</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نوع البيانات</th>
+                            <th>الغرض</th>
+                            <th>مطلوب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>معرّف إعلانات الجهاز</td>
+                            <td>إعلانات مخصصة</td>
+                            <td>نعم</td>
+                        </tr>
+                        <tr>
+                            <td>سجل المشاهدة</td>
+                            <td>تخصيص التطبيق</td>
+                            <td>نعم</td>
+                        </tr>
+                        <tr>
+                            <td>بيانات التفاعل مع الإعلانات</td>
+                            <td>عرض الإعلانات والتحليلات</td>
+                            <td>نعم</td>
+                        </tr>
+                        <tr>
+                            <td>التفضيلات للذكاء الاصطناعي</td>
+                            <td>توصيات أفلام بالذكاء الاصطناعي</td>
+                            <td>اختياري</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2><span class="section-num">3</span> كيف نستخدم معلوماتكم</h2>
+                <p>نستخدم المعلومات المجمّعة للأغراض التالية:</p>
+                <ul>
+                    <li><strong>التخصيص:</strong> لتكييف توصيات الأفلام والإعلانات المعروضة لكم بناءً على سجل مشاهداتكم وتفضيلاتكم.</li>
+                    <li><strong>الإعلانات:</strong> لعرض إعلانات ملائمة عبر Google AdMob، مما يساعد في إبقاء التطبيق مجانيًا.</li>
+                    <li><strong>توصيات الذكاء الاصطناعي:</strong> لتقديم اقتراحات أفلام ذكية عبر Anthropic Claude API عند تفعيلكم لهذه الميزة.</li>
+                    <li><strong>تحسين التطبيق:</strong> لتحليل أنماط الاستخدام وتحسين ميزات التطبيق ومحتواه وتجربة المستخدم.</li>
+                    <li><strong>تقديم المحتوى:</strong> لجلب بيانات الأفلام من TMDB وبث الإعلانات عبر YouTube.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="section-num">4</span> خدمات الطرف الثالث</h2>
+                <p>يتكامل سينمائي مع خدمات الطرف الثالث التالية. لكل خدمة سياسة خصوصية خاصة بها تحكم كيفية تعاملها مع البيانات:</p>
+
+                <h3>4.1 Google AdMob</h3>
+                <p>نستخدم Google AdMob لعرض الإعلانات. قد يجمع AdMob معرّفات الأجهزة وبيانات التفاعل مع الإعلانات لعرض إعلانات مخصصة أو غير مخصصة.</p>
+                <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a></p>
+
+                <h3>4.2 قاعدة بيانات الأفلام (TMDB)</h3>
+                <p>نستخدم واجهة TMDB API لاسترجاع معلومات الأفلام والملصقات والتقييمات والبيانات الوصفية الأخرى. لا تتلقى TMDB أي بيانات شخصية منّا.</p>
+                <p><a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noopener">سياسة خصوصية TMDB</a></p>
+
+                <h3>4.3 YouTube</h3>
+                <p>تُبث إعلانات الأفلام عبر مشغّل YouTube المدمج. قد يجمع YouTube بيانات وفقًا لسياسة خصوصية Google عند مشاهدتكم للإعلانات.</p>
+                <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية YouTube / Google</a></p>
+
+                <h3>4.4 Anthropic (واجهة Claude API)</h3>
+                <p>عند تفعيلكم لتوصيات الذكاء الاصطناعي، تُرسَل تفضيلات مشاهداتكم إلى واجهة Anthropic Claude API. تعالج Anthropic هذه البيانات لتوليد اقتراحات الأفلام ولا تستخدمها لتدريب النماذج.</p>
+                <p><a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Anthropic</a></p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">5</span> الاحتفاظ بالبيانات والأمان</h2>
+
+                <h3>5.1 الاحتفاظ بالبيانات</h3>
+                <p>تُخزَّن بيانات تفاعلكم محليًا على جهازكم وتُحفظ طوال فترة تثبيت التطبيق. إذا قمتم بإلغاء تثبيت التطبيق، تُحذف جميع البيانات المخزّنة محليًا.</p>
+                <p>البيانات التي تعالجها خدمات الطرف الثالث (Google AdMob، Anthropic) تُحفظ وفقًا لسياسات الخصوصية وجداول الاحتفاظ الخاصة بها.</p>
+
+                <h3>5.2 أمان البيانات</h3>
+                <p>نطبّق تدابير أمان معيارية لحماية البيانات أثناء النقل والتخزين، بما في ذلك:</p>
+                <ul>
+                    <li>اتصالات مشفّرة (HTTPS/TLS) لجميع استدعاءات الواجهات البرمجية</li>
+                    <li>الحد الأدنى من جمع البيانات -- نجمع فقط ما هو ضروري</li>
+                    <li>عدم تخزين بيانات شخصية على خوادمنا</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>رغم سعينا لاستخدام وسائل مقبولة تجاريًا لحماية بياناتكم، لا توجد طريقة نقل أو تخزين إلكتروني آمنة بنسبة 100%. لا يمكننا ضمان الأمان المطلق.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="section-num">6</span> حقوقكم وخياراتكم</h2>
+                <p>لديكم الحقوق والخيارات التالية فيما يتعلق ببياناتكم:</p>
+
+                <h3>6.1 إلغاء الاشتراك في الإعلانات المخصصة</h3>
+                <p>يمكنكم إلغاء الاشتراك في الإعلانات المخصصة عبر تعديل إعدادات جهازكم:</p>
+                <ul>
+                    <li><strong>Android:</strong> الإعدادات &gt; Google &gt; الإعلانات &gt; "حذف معرّف الإعلانات"</li>
+                    <li><strong>iOS:</strong> الإعدادات &gt; الخصوصية والأمان &gt; التتبع &gt; تعطيل "السماح للتطبيقات بطلب التتبع"</li>
+                </ul>
+
+                <h3>6.2 إلغاء توصيات الذكاء الاصطناعي</h3>
+                <p>تتطلب ميزة التوصيات بالذكاء الاصطناعي موافقتكم الصريحة. يمكنكم تعطيلها في أي وقت من إعدادات التطبيق. عند التعطيل، لا تُرسَل أي بيانات إلى Anthropic.</p>
+
+                <h3>6.3 مسح البيانات المحلية</h3>
+                <p>يمكنكم مسح جميع البيانات المخزّنة محليًا عبر مسح ذاكرة التخزين المؤقت وبيانات التطبيق في إعدادات جهازكم، أو بإلغاء تثبيت التطبيق.</p>
+
+                <h3>6.4 طلبات حذف البيانات</h3>
+                <p>نظرًا لعدم احتفاظنا بحسابات مستخدمين أو تخزين بيانات شخصية على خوادمنا، فإن معظم البيانات تحت سيطرتكم بالفعل. لأي طلبات حذف بيانات تتعلق بخدمات الطرف الثالث، يرجى التواصل معنا على <a href="mailto:maytham.altaan@icloud.com">maytham.altaan@icloud.com</a>.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">7</span> خصوصية الأطفال</h2>
+                <p>تطبيق سينمائي مخصص للمستخدمين الذين تبلغ أعمارهم <strong>13 عامًا فما فوق</strong>. نحن لا نجمع عن قصد معلومات شخصية من الأطفال دون 13 عامًا. إذا كنت والدًا أو وصيًا وتعتقد أن طفلك دون 13 عامًا قد قدّم بيانات عبر التطبيق، يرجى التواصل معنا على <a href="mailto:maytham.altaan@icloud.com">maytham.altaan@icloud.com</a> وسنتخذ خطوات لإزالة هذه المعلومات.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">8</span> التغييرات على هذه السياسة</h2>
+                <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. عند إجراء تغييرات، سنقوم بتحديث تاريخ "آخر تحديث" في أعلى هذه الصفحة. نشجعكم على مراجعة سياسة الخصوصية هذه دوريًا لمعرفة أي تغييرات. يُعتبر استمراركم في استخدام التطبيق بعد نشر التغييرات قبولًا منكم للسياسة المعدّلة.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-num">9</span> تواصل معنا</h2>
+                <p>إذا كانت لديكم أي أسئلة أو استفسارات أو طلبات بخصوص سياسة الخصوصية هذه أو ممارساتنا المتعلقة بالبيانات، يرجى التواصل معنا:</p>
+                <ul>
+                    <li><strong>البريد الإلكتروني:</strong> <a href="mailto:maytham.altaan@icloud.com">maytham.altaan@icloud.com</a></li>
+                    <li><strong>التطبيق:</strong> سينمائي (Cinemati)</li>
+                </ul>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="content-en visible">
+            <p>&copy; 2026 Cinemati. All rights reserved.</p>
+        </div>
+        <div class="content-ar" dir="rtl">
+            <p>&copy; 2026 سينمائي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            const enElements = document.querySelectorAll('.content-en');
+            const arElements = document.querySelectorAll('.content-ar');
+            const btnEn = document.getElementById('btn-en');
+            const btnAr = document.getElementById('btn-ar');
+
+            if (lang === 'ar') {
+                enElements.forEach(el => el.classList.remove('visible'));
+                arElements.forEach(el => el.classList.add('visible'));
+                btnAr.classList.add('active');
+                btnEn.classList.remove('active');
+                document.documentElement.lang = 'ar';
+            } else {
+                arElements.forEach(el => el.classList.remove('visible'));
+                enElements.forEach(el => el.classList.add('visible'));
+                btnEn.classList.add('active');
+                btnAr.classList.remove('active');
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+
+</body>
+</html>
